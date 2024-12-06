@@ -3,6 +3,7 @@ import { View, FlatList, StyleSheet, Text } from "react-native";
 import KpiDetailItem from "./KpiDetailItem";
 import KpiDetailContent from "./KpiDetailContent";
 import Colors from "../../Shared/Colors";
+import cardData from './cardData';
 
 export default function KpiDetailList() {
   // Initializing KPI list values directly in this file
@@ -58,7 +59,7 @@ export default function KpiDetailList() {
         keyExtractor={(item) => item.id.toString()}
       />
       
-      <KpiDetailContent activeCategory={activeCategory} />
+      <KpiDetailContent activeCategory={activeCategory} /* cardData={cardData} */ />
     </View>
   );
 }
@@ -66,7 +67,7 @@ export default function KpiDetailList() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
   listContainer: {
     flexDirection: "row",

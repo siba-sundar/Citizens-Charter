@@ -10,7 +10,7 @@ export default function KpiDetail() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+      
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.goBackButton}
@@ -31,7 +31,7 @@ export default function KpiDetail() {
         />
       </View>
 
-      {/* KPI Details Content */}
+      
       <View style={styles.content}>
         <Text style={styles.headerText}>Performance Insights</Text>
       </View>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
   },
   header: {
-    backgroundColor: Colors.WHITE, // Red color for the header
+    backgroundColor: Colors.WHITE, 
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   goBackCircle: {
-    backgroundColor: Colors.RED || "#E63946", // Replace Colors.RED with your red color
+    backgroundColor: Colors.RED || "#E63946",
     width: 40,
     height: 40,
     borderRadius: 20,
