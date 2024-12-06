@@ -6,18 +6,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import Colors from './App/Shared/Colors';
-
-
 import TabNavigation from './App/Navigation/TabNavigation';
 import KpiNavigation from './App/Navigation/KpiNavigation';
-import HelpSupport from "./App/Navigation/Help-Support.js"
-
 import OpeningPage from './App/Screens/opening.js'; // Correct path
 import Login from './App/Screens/login.js';        // Correct path
 import Signup from './App/Screens/Signup.js';      // Correct path
 import UserSignup1 from './App/Screens/user/UserSignup.js'; // Correct path
 
-
+  
 // Custom Header Component
 function CustomHeader({ navigation }) {
   const userProfile = require('./assets/user.png'); // Adjust the path to your user image
@@ -46,7 +42,13 @@ function DrawerNavigator() {
       })}
     >
       <Drawer.Screen name="Home" component={TabNavigation} />
-
+      <Drawer.Screen
+        name="KPI"
+        component={KpiNavigation}
+        options={{
+          headerShown: false, // Hide default header for KPI
+        }}
+      />
     </Drawer.Navigator>
   );
 }
@@ -85,19 +87,6 @@ export default function App() {
           component={DrawerNavigator}
           options={{ headerShown: false }} // No header for the DrawerNavigator
         />
-        <Stack.Screen
-          name="KPI"
-          component={KpiNavigation}
-          options={{
-            headerShown: false, // Hide default header for KPI
-          }}
-        />
-        <Stack.Screen
-        name = "HelpSupport"
-        component={HelpSupport}
-        options={{
-          headerShown: false,
-        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

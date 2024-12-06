@@ -39,6 +39,11 @@ export default function PerformanceDashboardList() {
         screen: 'kpi-detail',
       });
     }
+    else if (item.value === "help_and_support"){
+      navigation.navigate("HelpSupport",{
+        screen: 'Help-Support',
+      })
+    }
   };
 
   return (
